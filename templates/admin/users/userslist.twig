@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello adduserController!
+{% endblock %}
+
+{% block body %}
+	{{header| raw }}
+	<div
+		class="main-content app-content">
+		<!-- container -->
+		<div
+			class="main-container container-fluid">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-header justify-content-between">
+				<div class="left-content">
+					<span class="main-content-title mg-b-0 mg-b-lg-1">Users List</span>
+				</div>
+				<div class="justify-content-center mt-2">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item tx-15">
+							<a href="javascript:void(0);">Dashboard</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">Users List</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<div class="white_card card_height_100 mb_30 pt-4">
+						<div class="white_card_body">
+							<div class="QA_section">
+								<div class="white_box_tittle list_header">
+									<h4>User List
+									</h4>
+									<div class="box_right d-flex lms_block">
+										<div class="serach_field_2">
+											<div class="search_inner">
+												<form active="#">
+													<div class="search_field">
+														<input type="text" placeholder="Search content here...">
+													</div>
+													<button type="submit">
+														<i class="ti-search"></i>
+													</button>
+												</form>
+											</div>
+										</div>
+										<div class="add_button ms-2">
+											<a href="#" data-toggle="modal" data-target="#addcategory" class="btn_1">search</a>
+										</div>
+									</div>
+								</div>
+								<div class="QA_table mb_30">
+
+									<table class="table lms_table_active ">
+										<thead>
+											<tr>
+												<th scope="col">id</th>
+												<th scope="col">User</th>
+												<th scope="col">Name Family</th>
+												<th scope="col">Email Address</th>
+												<th scope="col">Role</th>
+												<th scope="col">Status</th>
+												<th scope="col">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											{%for user in users %}
+												<tr>
+													<th scope="row">
+														<a href="#" class="question_content">
+															{{user.number}}
+														</a>
+													</th>
+													<td>{{user.userName}}</td>
+													<td>{{user.userFirstLastName}}</td>
+													<td>
+														<a href="" class="__cf_email__" data-cfemail="24534b564f10141d644349454d480a474b49">{{user.userEmail}}</a>
+													</td>
+													<td>
+														<a href="#">{{user.userRole}}</a>
+													</td>
+													<td>
+														<a href="#" class="status_btn" {%if user.userStatus == 'Inactive' %} style="background:red;"{% endif %}>{{user.userStatus}}</a>
+													</td>
+													<td>
+														<div class="action_btns d-flex">
+															<a href="{{user.userEdit}}" class="action_btn mr_10">
+																<i class="far fa-edit"></i>
+															</a>
+															<a href="#" class="action_btn">
+																<i class="fas fa-trash"></i>
+															</a>
+														</div>
+													</td>
+												</tr>
+												
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Container -->
+	</div>
+	{{footer | raw}}
+{% endblock %}

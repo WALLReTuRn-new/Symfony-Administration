@@ -1,0 +1,79 @@
+{{ form_start(form, {
+    'attr': {
+        'class': 'form-inline',
+		'data-toggle':'ajax',
+		'novalidate': 'novalidate'
+    }
+}) }}
+{{ form_errors(form) }}
+
+<div class="info-form">
+	<div class="alert d-none" role="alert">
+		A simple primary alert—check it out!
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userName) }}
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userFirstName) }}
+		</div>
+	</div>
+
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userLastName) }}
+		</div>
+	</div>
+
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userEmail) }}
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userPhone) }}
+		</div>
+	</div>
+
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userPassword) }}
+		</div>
+	</div>
+
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userRole)}}
+		</div>
+	</div>
+
+
+	<div class="col-lg-6">
+		<div class="common_input mb_15">
+			{{ form_row(form.userStatus) }}
+		</div>
+	</div>
+
+
+	<button type="submit" class="btn btn-primary mt-3 mb-0">
+		Save
+	</button>
+
+</div>
+
+
+<!--'novalidate': 'novalidate'-->

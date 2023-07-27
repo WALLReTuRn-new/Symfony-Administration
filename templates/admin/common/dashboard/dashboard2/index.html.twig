@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello dashboard2Controller!
+{% endblock %}
+
+{% block body %}
+	{{header| raw }}
+	<div
+		class="main-content app-content">
+		<!-- container -->
+		<div
+			class="main-container container-fluid">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-header justify-content-between">
+				<div class="left-content">
+					<span class="main-content-title mg-b-0 mg-b-lg-1">DASHBOARD</span>
+				</div>
+				<div class="justify-content-center mt-2">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item tx-15">
+							<a href="javascript:void(0);">Dashboard</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">Sales</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<div class="example-wrapper">
+						<h1>Hello
+							{{ controller_name }}! ✅</h1>
+
+						This friendly message is coming from:
+						<ul>
+							<li>Your controller at
+								<code>
+									<a href="{{ 'C:/Users/wallr/source/repos/CRM/src/Controller/Admin/common/dashboard/dashboard2Controller.php'|file_link(0) }}">src/Controller/Admin/common/dashboard/dashboard2Controller.php</a>
+								</code>
+							</li>
+							<li>Your template at
+								<code>
+									<a href="{{ 'C:/Users/wallr/source/repos/CRM/templates/admin/common/dashboard/dashboard2/index.html.twig'|file_link(0) }}">templates/admin/common/dashboard/dashboard2/index.html.twig</a>
+								</code>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Container -->
+	</div>
+	{{footer| raw }}
+{% endblock %}

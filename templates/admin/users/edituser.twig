@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello adduserController!
+{% endblock %}
+
+{% block body %}
+	{{header| raw }}
+	<div
+		class="main-content app-content">
+		<!-- container -->
+		<div
+			class="main-container container-fluid">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-header justify-content-between">
+				<div class="left-content">
+					<span class="main-content-title mg-b-0 mg-b-lg-1">Add Users</span>
+				</div>
+				<div class="justify-content-center mt-2">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item tx-15">
+							<a href="javascript:void(0);">Dashboard</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">Add User</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					{{form | raw}}
+				</div>
+			</div>
+		</div>
+		<!-- /Container -->
+	</div>
+	{{footer | raw}}
+{% endblock %}
